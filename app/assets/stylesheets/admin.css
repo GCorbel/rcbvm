@@ -1,0 +1,20 @@
+/*
+ *= require aloha/css/aloha
+ *= require_self
+ */
+footer {
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  width:100%;
+  background:#FFF;
+  padding-left: 10px;
+}
+
+footer a {
+  margin: 10px;
+}
+
+footer a:hover {
+  cursor: pointer
+}

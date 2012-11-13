@@ -1,0 +1,13 @@
+<% if refinery_user? && "#{controller_name}##{action_name}" != 'pages#preview' %>
+  <div id='site_bar'>
+    <div id='site_bar_content' class='clearfix'>
+      <div id='editor_switch'>
+        <%= site_bar_switch_link -%>
+      </div>
+      <div id='site_bar_branding'>
+        <%= link_to t('.log_out', site_bar_translate_locale_args),
+                    refinery.destroy_refinery_user_session_path, :id => 'logout' %>
+      </div>
+    </div>
+  </div>
+<% end %>

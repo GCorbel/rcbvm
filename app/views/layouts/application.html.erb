@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<%= render '/refinery/html_tag' %>
+<%= render '/refinery/head' %>
+<body>
+  <div class="container ds-dragover">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">RCBVM</a>
+          <%= render '/refinery/menu' %>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span12">
+        <header class="well"></header>
+      </div>
+    </div>
+    <%= yield %>
+    <%= render '/refinery/javascripts' %>
+  </div>
+</body>
+</html>
