@@ -31,10 +31,6 @@ Aloha.settings =
     table:
       config: 'table'
 
-    image:
-      config: ['img']
-      editables: '.editable-short-text': []
-
     link:
       config: [ 'a' ]
       editables: '.editable-short-text': []
