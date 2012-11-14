@@ -8,7 +8,6 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require aloha/css/aloha
  *= require bootstrap-responsive
  *= require bootstrap.min
  *= require formatting
@@ -19,4 +18,8 @@ header {
   background-image: url(/assets/moisie.jpg);
   background-size: cover;
   height: 200px;
+}
+
+body {
+  padding-top: 60px;
 }
