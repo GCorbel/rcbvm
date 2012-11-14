@@ -18,9 +18,9 @@ window.Rcbvm =
 $.ajaxSetup
   beforeSend: (xhr, settings) ->
     csrf_token = $('meta[name="csrf-token"]').attr('content')
-    return if (settings.crossDomain)
-    return if (settings.type == "GET")
-    if (csrf_token)
+    return if settings.crossDomain
+    return if settings.type == "GET"
+    if csrf_token
       xhr.setRequestHeader('X-CSRF-Token', csrf_token)
 
 $(document).ready ->
