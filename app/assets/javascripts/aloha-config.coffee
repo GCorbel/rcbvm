@@ -88,28 +88,41 @@ Aloha.settings =
       'numerated-headers':
         numeratedactive: false
 
+#Search the div for the current model
 Aloha.getEditableField = ->
   $("##{Aloha.activeEditable.obj[0].id}")
 
-Aloha.onActivated = ->
-  obj = Aloha.getEditableField()
-  modelName = obj.attr('data-object')
-  Rcbvm.getCurrentModel(modelName).id = obj.attr('data-id')
-
+#Bind events when an aloha editor is activated
 Aloha.active = ->
   Aloha.jQuery(Aloha.settings.editables).aloha()
   Aloha.bind('aloha-editable-activated', Aloha.onActivated)
   Aloha.bind('aloha-editable-deactivated', Aloha.onDeactivated)
 
-Aloha.onDeactivated = ->
-  content = Aloha.activeEditable.getContents()
+#Find the model edited and add the id of field
+Aloha.onActivated = ->
+  #Find the div of activated field
   obj = Aloha.getEditableField()
+  #Get the model name from the data-object attribute of the field
   modelName = obj.attr('data-object')
+  #Find or create a model with the model's name and add the id
+  Rcbvm.getCurrentModel(modelName).id = obj.attr('data-id')
+
+#Update the attribute of the model when aloha is deactivated
+Aloha.onDeactivated = ->
+  #Find the content of the edited field
+  content = Aloha.activeEditable.getContents()
+  #Find the div of activated field
+  obj = Aloha.getEditableField()
+  #Get the model name from the data-object attribute of the field
+  modelName = obj.attr('data-object')
+  #Update the attribute of the current model
   Rcbvm.getCurrentModel(modelName).set(obj.attr('data-attribute'), content)
 
+#Delete all the aloha editors
 Aloha.deactive = ->
   Aloha.jQuery(Aloha.settings.editables).mahalo()
 
+#Bind actived and deactived events when all aloha's files are ready
 Aloha.onReady = ->
   Aloha.bind('aloha-editable-activated', Aloha.onActivated)
   Aloha.bind('aloha-editable-deactivated', Aloha.onDeactivated)

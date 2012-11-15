@@ -16,14 +16,17 @@ class Rcbvm.Views.InlineEditor.ToolbarView extends Backbone.View
     @$('.cancel').hide()
     @
 
+# commit all changes for all stored model
   save_changes: (event) ->
     $.each(Rcbvm.currentModels, (key, model) ->
       model.save()
     )
 
+# reload the page to cancel all change
   cancel_changes: (event) ->
     window.location.reload()
 
+# toggle the editing mode
   toggle_editing_mode: ->
     if $('.save').is(':hidden')
       @$('.save').show()
