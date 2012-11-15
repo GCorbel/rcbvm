@@ -39,11 +39,11 @@ To load all files, In the layout, I added this :
       <%= stylesheet_link_tag 'admin', 'aloha/css/aloha' %>
       <% content_for :javascripts do %>
         <script data-aloha-plugins="common/table, common/highlighteditables, common/format,common/list,common/link,common/block,common/undo,common/contenthandler,common/paste" src="/assets/aloha/lib/aloha.js" type="text/javascript"></script>
-        <%= javascript_include_tag 'admin' %>
+        <%= javascript_include_tag 'frontend_admin' %>
       <% end %>
     <% end -%>
 
-Obiviously, I added the needed javascripts and stylesheets file in application.js and application.css.
+Obiviously, I added the needed javascripts and stylesheets file in frontend_admin.js and admin.css.
 
 Now, in the views, for pages, in [/master/app/views/refinery/pages](https://github.com/GCorbel/rcbvm/tree/master/app/views/refinery/pages), I added this :
 
