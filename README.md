@@ -6,6 +6,8 @@ This project is just a simple website about the RCBVM (Regroupement Citoyen de l
 
 In this project, I integreted a front-end editor to RefineryCMS. I use aloha-editor for the wysiwyg but I think it's easy to change it. It's also easy to use it with a standard rails application or other gems or CMS.
 
+You can view a screencast [here](http://youtu.be/bQKyju8QfEA)
+
 ## How it works
 
 This is simple rails and backbone code.
