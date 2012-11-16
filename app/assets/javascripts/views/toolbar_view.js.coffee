@@ -21,6 +21,7 @@ class Rcbvm.Views.InlineEditor.ToolbarView extends Backbone.View
     $.each(Rcbvm.currentModels, (key, model) ->
       model.save()
     )
+    Rcbvm.currentModels = {}
 
 # reload the page to cancel all change
   cancel_changes: (event) ->
