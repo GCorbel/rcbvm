@@ -10,4 +10,4 @@ In this project, I integreted a front-end editor to RefineryCMS. I use aloha-edi
 
 This is the same think than master branch but for ckeditor. For more details please see the README in the master branch.
 
-I made another screencast, for CKeditor, [here]
+I made another screencast, for CKeditor, [here](http://youtu.be/4IyA59np8NU)
