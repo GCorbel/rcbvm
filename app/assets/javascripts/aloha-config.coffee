@@ -127,7 +127,12 @@ Aloha.onReady = ->
   Aloha.bind('aloha-editable-activated', Aloha.onActivated)
   Aloha.bind('aloha-editable-deactivated', Aloha.onDeactivated)
 
+Aloha.commitAll = ->
+  #Nothing to do with aloha editor
+
 Aloha.ready = ->
   Aloha.require(Aloha.settings.modules, (Aloha, $) ->
     Aloha.onReady()
   )
+
+window.Editor = Aloha

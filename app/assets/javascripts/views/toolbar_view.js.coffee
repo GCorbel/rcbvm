@@ -18,6 +18,7 @@ class Rcbvm.Views.InlineEditor.ToolbarView extends Backbone.View
 
 # commit all changes for all stored model
   save_changes: (event) ->
+    Editor.commitAll()
     $.each(Rcbvm.currentModels, (key, model) ->
       model.save()
     )
@@ -32,8 +33,8 @@ class Rcbvm.Views.InlineEditor.ToolbarView extends Backbone.View
     if $('.save').is(':hidden')
       @$('.save').show()
       @$('.cancel').show()
-      Aloha.active()
+      Editor.active()
     else
       @$('.save').hide()
       @$('.cancel').hide()
-      Aloha.deactive()
+      Editor.deactive()
