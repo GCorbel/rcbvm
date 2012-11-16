@@ -10,9 +10,8 @@
   <%= stylesheet_link_tag 'application' %>
   <% if refinery_user? && "#{controller_name}##{action_name}" != 'pages#preview' %>
     <% unless admin? # all required JS included by backend. %>
-      <%= stylesheet_link_tag 'admin', 'aloha/css/aloha' %>
+      <%= stylesheet_link_tag 'admin' %>
       <% content_for :javascripts do %>
-        <script data-aloha-plugins="common/table, common/highlighteditables, common/format,common/list,common/link,common/block,common/undo,common/contenthandler,common/paste" src="/assets/aloha/lib/aloha.js" type="text/javascript"></script>
         <%= javascript_include_tag 'frontend_admin' %>
       <% end %>
     <% end -%>
