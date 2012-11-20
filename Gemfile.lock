@@ -1,4 +1,16 @@
 GIT
+  remote: git://github.com/GCorbel/frontendeditor.git
+  revision: e1d0e10cae7001101b356c35e6bb85047232e98f
+  specs:
+    frontendeditor (0.0.1)
+
+GIT
+  remote: git://github.com/GCorbel/frontendeditor_ckeditor.git
+  revision: e38c20d733656c4589c891286a89e3ca0f01fec8
+  specs:
+    frontendeditor_ckeditor (0.0.1)
+
+GIT
   remote: git://github.com/lafeber/ckeditor.git
   revision: 79d25835c3aa62c647e1d71d8c8ebefb2f4a393b
   specs:
@@ -268,6 +280,8 @@ DEPENDENCIES
   ckeditor!
   coffee-rails (~> 3.2.1)
   fog
+  frontendeditor!
+  frontendeditor_ckeditor!
   heroku
   jquery-rails (~> 2.0.0)
   jquery-ui-rails
