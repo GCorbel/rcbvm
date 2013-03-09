@@ -4,10 +4,6 @@ This project is just a simple website about the RCBVM (Regroupement Citoyen de l
 
 ## Why it could be intersant for a developper?
 
-In this project, I integreted a front-end editor to RefineryCMS. I use aloha-editor for the wysiwyg but I think it's easy to change it. It's also easy to use it with a standard rails application or other gems or CMS.
+In this project, I integrated a front-end editor to Refinery CMS. I use aloha-editor for the wysiwyg but I think it's easy to change it. It's also easy to use it with a standard Rails application or other gems or CMS.
 
-## What is this branch
-
-This is the same think than master branch but for ckeditor. For more details please see the README in the master branch.
-
-I made another screencast, for CKeditor, [here](http://youtu.be/4IyA59np8NU)
+This project use the gem frontendeditor_ckeditor
