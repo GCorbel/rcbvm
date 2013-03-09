@@ -12,9 +12,7 @@
   </div>
   <div class="span9">
     <div class="well">
-      <div class="editable-long-text" data-object="pages" data-id="<%= @page.id %>" data-attribute="body">
-        <%= raw @page.content_for(:body) %>
-      </div>
+      <%= raw editable @page, content: @page.content_for(:body) %>
     </div>
     <% if @page.images.any? %>
       <div class="well">
