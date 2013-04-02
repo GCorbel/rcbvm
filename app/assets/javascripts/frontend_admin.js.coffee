@@ -1,3 +1,4 @@
+//= require jquery-ui
 //= require underscore
 //= require backbone
 //= require ckeditor/init_ckeditor
